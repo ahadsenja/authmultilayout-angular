@@ -15,6 +15,9 @@ import { BoardAdminComponent } from './components/board-admin/board-admin.compon
 import { BoardModeratorComponent } from './components/board-moderator/board-moderator.component';
 import { BoardUserComponent } from './components/board-user/board-user.component';
 
+import { LoginLayoutComponent } from './layouts/login-layout/login-layout.component';
+import { DashboardLayoutComponent } from './layouts/dashboard-layout/dashboard-layout.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +28,9 @@ import { BoardUserComponent } from './components/board-user/board-user.component
     ProfileComponent,
     BoardAdminComponent,
     BoardModeratorComponent,
-    BoardUserComponent
+    BoardUserComponent,
+    LoginLayoutComponent,
+    DashboardLayoutComponent
   ],
   imports: [
     BrowserModule,
