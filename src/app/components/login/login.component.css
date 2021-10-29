@@ -1,0 +1,27 @@
+.login-layout {
+ height: 100vh;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.login-layout .login-form {
+ width: 400px;
+ height: 320px;
+ padding: 20px;
+ border: 1px solid rgb(226, 226, 226);
+ border-radius: 10px;
+}
+
+label {
+ color: #333333;
+ padding-top: 10px;
+}
+
+button {
+ margin-top: 18px;
+}
+
+.redirect {
+ padding-top: 30px;
+}

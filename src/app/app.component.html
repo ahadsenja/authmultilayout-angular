@@ -1,1 +1,9 @@
-<router-outlet></router-outlet>
+<app-navbar *ngIf="!showNavbar"></app-navbar>
+
+<div fxLayout="row" fxFlex="100">
+ <app-sidebar *ngIf="!showSidebar" fxLayout="column" fxFlex="300px" id="sidebar"></app-sidebar>
+  
+ <div class="content" fxLayout="column" fxFlex>
+  <router-outlet></router-outlet>
+ </div>
+</div>

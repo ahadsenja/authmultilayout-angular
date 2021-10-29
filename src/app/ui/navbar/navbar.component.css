@@ -4,12 +4,12 @@ navbar navbar-expand-lg navbar-light {
 }
 
 .navbar {
- background-color: #022355;
+ background-color: #0d0d36;
 }
 
 .navbar .navbar-brand {
  color: #fff;
- font-weight: 700;
+ font-weight: 500;
 }
 
 .navbar .nav-item .nav-link {

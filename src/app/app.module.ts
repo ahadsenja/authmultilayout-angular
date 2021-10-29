@@ -17,6 +17,7 @@ import { BoardUserComponent } from './components/board-user/board-user.component
 
 import { LoginLayoutComponent } from './layouts/login-layout/login-layout.component';
 import { DashboardLayoutComponent } from './layouts/dashboard-layout/dashboard-layout.component';
+import { SidebarComponent } from './ui/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { DashboardLayoutComponent } from './layouts/dashboard-layout/dashboard-l
     BoardModeratorComponent,
     BoardUserComponent,
     LoginLayoutComponent,
-    DashboardLayoutComponent
+    DashboardLayoutComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,

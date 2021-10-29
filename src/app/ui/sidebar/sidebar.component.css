@@ -1,0 +1,26 @@
+.nav {
+ margin-top: 20px;
+}
+
+.nav-item a {
+ color: #FFFFFF;
+ font-size: 15px;
+}
+
+
+.nav-item.background:hover {
+ background-color: rgb(0, 132, 255);
+}
+
+#logout a {
+ position: absolute;
+ bottom: 0;
+ padding-bottom: 80px;
+}
+
+#logout a:hover {
+ position: absolute;
+ bottom: 0;
+ padding-bottom: 80px;
+ color: rgb(0, 132, 255);
+}

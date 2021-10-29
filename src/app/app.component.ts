@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 
 import { TokenStorageService } from './service/token-storage.service';
 
@@ -16,7 +17,14 @@ export class AppComponent {
   showModeratorBoard = false;
   username?: string;
 
-  constructor(private token: TokenStorageService) {}
+  showNavbar = false;
+  showSidebar = false;
+
+  constructor(
+    private token: TokenStorageService, 
+    private router: Router,
+    private activatedRoute: ActivatedRoute
+  ) {}
 
   ngOnInit(): void {
     this.isLoggedIn = !!this.token.getToken();
@@ -30,6 +38,15 @@ export class AppComponent {
 
       this.username = user.username;
     }
+
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        this.showNavbar = 
+        this.activatedRoute.firstChild?.snapshot.data.showNavbar !== false;
+        this.showSidebar = 
+        this.activatedRoute.firstChild?.snapshot.data.showSidebar !== false;
+      }
+    })
   }
 
   logout(): void {

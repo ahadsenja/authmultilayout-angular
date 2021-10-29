@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
+import { AuthGuard } from './helper/auth.guard';
+
 import { DashboardLayoutComponent } from './layouts/dashboard-layout/dashboard-layout.component';
 import { LoginLayoutComponent } from './layouts/login-layout/login-layout.component';
 
@@ -17,6 +19,7 @@ const routes: Routes = [
   {
     path: '',
     component: DashboardLayoutComponent,
+    canActivate: [AuthGuard],
     children: [
       {
         path: '',
@@ -31,19 +34,14 @@ const routes: Routes = [
   },
 
   {
-    path: '',
-    component: LoginLayoutComponent,
-    children: [
-      {
-        path: 'login',
-        loadChildren: () => import('./modules/login/login.module').then(m => m.LoginModule)
-      },
-      {
-        path: 'signup',
-        loadChildren: () => import('./modules/signup/signup.module').then(m => m.SignupModule)
-      }
-    ]
+    path: 'login',
+    loadChildren: () => import('./modules/login/login.module').then(m => m.LoginModule)
   },
+
+  {
+    path: 'signup',
+    loadChildren: () => import('./modules/signup/signup.module').then(m => m.SignupModule)
+  }
 
   // {path: '', redirectTo: '/', pathMatch: 'full'},
   // {path: 'dashboard', component: HomeComponent},
